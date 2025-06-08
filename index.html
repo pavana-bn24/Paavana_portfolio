@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>React App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f4f7fa;
+      color: #333;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.7;
+    }
+
+    header {
+      height: 100vh;
+      background: linear-gradient(to right, rgba(15,32,39,0.9), rgba(44,83,100,0.9)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.4rem;
+      font-style: italic;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2c5364;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #0077b6;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      background: #0077b6;
+      transition: width 0.4s ease;
+      width: 0;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2.3rem;
+      font-family: 'Playfair Display', serif;
+      color: #2c5364;
+      margin-bottom: 1.2rem;
+      border-left: 5px solid #2c5364;
+      padding-left: 1rem;
+    }
+
+    ul {
+      padding-left: 2rem;
+      list-style: circle;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+    }
+
+    .project-card, .cert-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-left: 6px solid #2c5364;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover, .cert-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact {
+      background: #2c5364;
+      color: #fff;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .contact a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ffd700;
+    }
+
+    .btn-download {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background: #ffd700;
+      color: #2c5364;
+      font-weight: bold;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn-download:hover {
+      background: #f4b400;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #dcdcdc;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="22.jpg" alt="Pavana Profile" class="profile-pic">
+    <h1>Pavana B N</h1>
+    <p>Innovating Tomorrow with Code & Creativity</p>
+    <a href="sume.pdf" class="btn-download">View Resume</a>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#softskills">Soft Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p><strong>Date of Birth:</strong> 24th October 2003</p>
+    <p><strong>Location:</strong> Tiptur, Tumkur District, Karnataka, India</p>
+    <p><strong>Languages:</strong> Kannada (Fluent), English (Fluent)</p>
+  </section>
+
+  <section id="education">
+    <h2>Academic Journey</h2>
+    <ul>
+      <li><strong>B.E. in Computer Science</strong> – Malnad College of Engineering, Hassan | CGPA: 9.06 (2026)</li>
+      <li><strong>PUC</strong> – Kalpataru PU College | 94.5% (2022)</li>
+      <li><strong>SSLC</strong> – Tagore English School | 95.84% (2020)</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>HTML, CSS, C, C++, Python (Basics)</li>
+      <li>SQL (Basics)</li>
+      <li>Tools: Figma, Canva, PyCharm</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Project Highlights</h2>
+    <div class="project-card">
+      <h3>Automated Fire Extinguisher</h3>
+      <p>Sensor-based system for fire detection and suppression with automated actuation.</p>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="cert-card">
+      <ul>
+        <li>Soft Skill Development – NPTEL</li>
+        <li>Software Testing – NPTEL</li>
+        <li>Python Programming – IntelliPaat</li>
+        <li>Battery Technician – PMKVY</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="softskills">
+    <h2>Soft Skills</h2>
+    <ul>
+      <li>Critical Thinking</li>
+      <li>Time Management</li>
+      <li>Team Collaboration</li>
+      <li>Leadership</li>
+    </ul>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Let's Connect</h2>
+    <p>Email: <a href="mailto:pavanabn23863@gmail.com">pavanabn23863@gmail.com</a></p>
+    <p>Phone: 9110847894</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/pavana-b-n-667aa4267" target="_blank">linkedin.com/in/pavana-b-n</a></p>
+    <div class="social-icons">
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/pavana-b-n-667aa4267" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:pavanabn23863@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Pavana B N. Designed with passion and precision.
+  </footer>
+</body>
+
+</html>
